@@ -3,8 +3,11 @@ import java.util.Scanner;
 public class Task5 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        String text = in.nextLine();
-        char[] chars = text.toCharArray();
+        StringBuilder text = new StringBuilder(new String());
+        while (in.hasNext()) {
+            text.append(in.nextLine());
+        }
+        char[] chars = text.toString().toCharArray();
         int countB = 0;
         int countG = 0;
         for (int i = 0; i < chars.length; i++) {
